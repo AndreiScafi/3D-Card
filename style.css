@@ -22,6 +22,13 @@ html {
 .frame {
     border: 1rem solid #333;
     border-radius: .5rem;
+    transform: rotateY(-40deg);
+    transform-style: preserve-3d;
+    transition: transform .4s;
+}
+
+.frame:hover {
+    transform: rotateY(0);
 }
 
 .content {
@@ -31,6 +38,14 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: .5rem;
+    transform: rotateY(40deg) rotateX(20deg);
+    transition: transform .4s;
+}
+
+.content:hover {
+    transform: rotateY(0) rotateX(0);
+    border-radius: 0;
 }
 
 .content h1 {
